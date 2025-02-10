@@ -64,8 +64,10 @@
     <Analyzer Include="/home/deny/Unity/Hub/Editor/2022.3.31f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/Sripts/Planet/GeneratePlanet.cs" />
-    <Compile Include="Assets/Sripts/Projectile.cs" />
+    <Compile Include="Assets/Sripts/Projectile/Projectile.cs" />
+    <Compile Include="Assets/Sripts/Cannon/Cannon.cs" />
+    <Compile Include="Assets/Sripts/Planet/Planet.cs" />
+    <Compile Include="Assets/Sripts/Bubble/Bubble.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
