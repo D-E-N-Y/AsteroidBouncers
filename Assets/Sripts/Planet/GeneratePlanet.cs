@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class GeneratePlanet : MonoBehaviour
@@ -10,6 +11,17 @@ public class GeneratePlanet : MonoBehaviour
     {
         r = 3;
         Generate(4);
+
+        StartCoroutine(Rotate());
+    }
+
+    private IEnumerator Rotate()
+    {
+        while(true)
+        {
+            transform.Rotate(Vector3.up * 10 * Time.deltaTime);
+            yield return null;
+        }
     }
 
     private void Generate(int layers)
@@ -36,7 +48,8 @@ public class GeneratePlanet : MonoBehaviour
 
                     Vector3 spawnPosition = new Vector3(x, y, z);
 
-                    Instantiate(bubblePrefab, spawnPosition, Quaternion.identity);
+                    GameObject bubble = Instantiate(bubblePrefab, spawnPosition, Quaternion.identity);
+                    bubble.transform.SetParent(transform);
                 }
             }
             r += bubbleDiameter;
