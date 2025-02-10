@@ -1,5 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
+    Assembly-CSharp.dll:
+    - GeneratePlanet
     Unity.PlasticSCM.Editor.dll:
     - Unity.PlasticSCM.Editor.PlasticWindow
     Unity.Rider.Editor.dll:
@@ -26,7 +28,13 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
@@ -37,6 +45,12 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 22348}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 135
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -801,6 +815,12 @@ ScriptsOnlyBuild:
     className: UnityOnParticleCollisionMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 926d9c62339147d9636cc7b25d86bb6f
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: GeneratePlanet
+  - hash:
+      serializedVersion: 2
       Hash: 0f5a086d4d028363983ba6ca30a01397
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -868,4 +888,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: /home/deny/UnityProjects/WaveCraft/Bin/PlanetOfBubbles.apk
+  playerPath: /home/deny/UnityProjects/PlanetOfBubbles/Bin/PlanetOfBubbles.apk

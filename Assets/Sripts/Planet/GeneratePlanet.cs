@@ -1,5 +1,3 @@
-using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class GeneratePlanet : MonoBehaviour
@@ -11,10 +9,10 @@ public class GeneratePlanet : MonoBehaviour
     private void Start() 
     {
         r = 3;
-        StartCoroutine(Generate(4));
+        Generate(4);
     }
 
-    private IEnumerator Generate(int layers)
+    private void Generate(int layers)
     {    
         float bubbleDiameter = bubblePrefab.GetComponent<SphereCollider>().radius * 1.8f;
         
@@ -39,13 +37,8 @@ public class GeneratePlanet : MonoBehaviour
                     Vector3 spawnPosition = new Vector3(x, y, z);
 
                     Instantiate(bubblePrefab, spawnPosition, Quaternion.identity);
-
-                    yield return new WaitForSeconds(0.01f);
                 }
             }
-
-            yield return new WaitForSeconds(0.1f);
-
             r += bubbleDiameter;
         }
     }
