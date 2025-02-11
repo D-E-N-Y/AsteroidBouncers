@@ -21,6 +21,10 @@ PrefabInstance:
       value: 26.7
       objectReference: {fileID: 0}
     - target: {fileID: 331549627965124809, guid: 2dca97e24498cf84ca60244f86ed1afc, type: 3}
+      propertyPath: namePlanet
+      value: Saturn
+      objectReference: {fileID: 0}
+    - target: {fileID: 331549627965124809, guid: 2dca97e24498cf84ca60244f86ed1afc, type: 3}
       propertyPath: segmentColors.Array.size
       value: 7
       objectReference: {fileID: 0}

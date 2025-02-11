@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Planet : MonoBehaviour
 {
+    [SerializeField] private string namePlanet;
     [SerializeField] private float radius;
     [SerializeField] private float layers;
 
@@ -24,6 +25,7 @@ public class Planet : MonoBehaviour
     }
 
     public Color[] GetColors() => segmentColors;
+    public string GetName() => namePlanet;
 
     private IEnumerator Rotate()
     {
@@ -105,6 +107,7 @@ public class Planet : MonoBehaviour
     private void UpdateBubbleCount()
     {
         countBubbles--;
+        GameSystem.current.AddScore();
 
         if(countBubbles <= 0)
         {
