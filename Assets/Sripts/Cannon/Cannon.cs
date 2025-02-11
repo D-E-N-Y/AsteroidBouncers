@@ -1,5 +1,5 @@
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Cannon : MonoBehaviour 
 { 
@@ -10,8 +10,11 @@ public class Cannon : MonoBehaviour
     [SerializeField] private float step;
 
     [SerializeField] private GameObject projectilePrefab;
-    private Projectile projectile;
+    private Projectile currentProjectile;
     private Color[] colors;
+
+    [SerializeField] Transform replaceProjectileTramsform;
+    private Projectile replaceProjectile;
 
     private int countProjectiles;
 
@@ -22,19 +25,63 @@ public class Cannon : MonoBehaviour
 
         GameSystem.current.CheckCountProjectiles(countProjectiles);
 
-        if(projectile)
+        if(currentProjectile)
         {
-            Destroy(projectile.gameObject);
+            Destroy(currentProjectile.gameObject);
         }
 
-        projectile = Instantiate(projectilePrefab, transform.position, transform.rotation).GetComponent<Projectile>();
-        projectile.Initialize(colors[Random.Range(0, colors.Length)]);
+        CreateProjectiles();
     }
 
+    private void CreateProjectiles()
+    {
+        if(replaceProjectile)
+        {
+            Destroy(replaceProjectile.gameObject);
+        }
+        
+        Color color = colors[Random.Range(0, colors.Length)];
+        
+        currentProjectile = Instantiate(projectilePrefab, transform.position, transform.rotation).GetComponent<Projectile>();
+        currentProjectile.Initialize(color);
+        
+        do
+        {
+            color = colors[Random.Range(0, colors.Length)];
+        }
+        while(currentProjectile.color == color);
+
+        replaceProjectile = Instantiate(projectilePrefab, replaceProjectileTramsform.position, transform.rotation).GetComponent<Projectile>();
+        replaceProjectile.Initialize(color);
+    }
+
+    public void ReplaceProjectile()
+    {
+        Projectile _projectile = currentProjectile;
+
+        replaceProjectile.transform.position = transform.position;
+        currentProjectile.transform.position = replaceProjectileTramsform.position;
+        
+        currentProjectile = replaceProjectile;
+        replaceProjectile = _projectile;
+    }
+
+    private bool isUI = false;
     private void Update() 
     { 
-        if(Input.touchCount == 0) return;
+        if(Input.touchCount == 0) 
+            return;
         
+        touch = Input.GetTouch(0);
+
+        if (touch.phase == TouchPhase.Began) 
+            isUI = EventSystem.current.IsPointerOverGameObject(touch.fingerId);
+        
+        Debug.Log(isUI);
+
+        if(isUI)
+            return;
+
         Rotate();
 
         float _angle = angle * Mathf.Deg2Rad;
@@ -43,12 +90,11 @@ public class Cannon : MonoBehaviour
         line.gameObject.SetActive(true);
         DrawPath(direction.normalized, initialVelocity, _angle, step);
 
-        if(touch.phase == TouchPhase.Ended)
+        if (touch.phase == TouchPhase.Ended)
         {
-            projectile.StartCoroutine(projectile.Fire(initialVelocity, _angle, direction.normalized, transform));
+            currentProjectile.StartCoroutine(currentProjectile.Fire(initialVelocity, _angle, direction.normalized, transform));
 
-            projectile = Instantiate(projectilePrefab, transform.position, transform.rotation).GetComponent<Projectile>();
-            projectile.Initialize(colors[Random.Range(0, colors.Length)]);
+            CreateProjectiles();
 
             transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
@@ -64,8 +110,6 @@ public class Cannon : MonoBehaviour
 
     private void Rotate()
     {
-        touch = Input.GetTouch(0);
-
         if (touch.phase == TouchPhase.Moved)
         {
             Vector2 deltaTouch = touch.deltaPosition;

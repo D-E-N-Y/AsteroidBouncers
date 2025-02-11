@@ -4,7 +4,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     private MeshRenderer meshRenderer;
-    private Color color;
+    public Color color { get; private set; }
 
     public void Initialize(Color color)
     {
