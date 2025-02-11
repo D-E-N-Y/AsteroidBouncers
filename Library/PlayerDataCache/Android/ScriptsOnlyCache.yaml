@@ -3,6 +3,8 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - Bubble
     - Cannon
+    - DestroyArea
+    - GameSystem
     - Planet
     - Projectile
     Unity.PlasticSCM.Editor.dll:
@@ -43,6 +45,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 89
@@ -59,6 +63,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 20710}
     - Class: 114
       Script: {instanceID: 22354}
+    - Class: 114
+      Script: {instanceID: 27836}
+    - Class: 114
+      Script: {instanceID: 29870}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -846,7 +854,7 @@ ScriptsOnlyBuild:
     className: UnityOnParticleCollisionMessageListener
   - hash:
       serializedVersion: 2
-      Hash: e9bf5b3b16b0ea353b21ab33356c926a
+      Hash: 0aa449a0edc11ec5750b7e83f91cbf56
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Planet
@@ -916,6 +924,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 80cf76e81840133ab89b4e557fa89522
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: GameSystem
+  - hash:
+      serializedVersion: 2
+      Hash: 0c009e63653b64b5d39c8b24589c541a
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: DestroyArea
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
