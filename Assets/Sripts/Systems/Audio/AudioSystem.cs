@@ -45,6 +45,9 @@ public class AudioSystem : MonoBehaviour
     public float GetVolumeMusic() => musicSource.volume;
     public float GetVolumeSFX() => sfxSource.volume;
 
+    public void StopMusic() => musicSource.Stop();
+    public void ContinueMusic() => musicSource.Play();
+
     public void PlayMusic(string name)
     {
         Sound sound = Array.Find(musicSounds, x => x.name == name);

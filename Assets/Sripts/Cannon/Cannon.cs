@@ -67,6 +67,19 @@ public class Cannon : MonoBehaviour
         replaceProjectile = _projectile;
     }
 
+    public void RemoveProjectile()
+    {
+        if(currentProjectile)
+        {
+            Destroy(currentProjectile.gameObject);
+        }
+
+        if(replaceProjectile)
+        {
+            Destroy(replaceProjectile.gameObject);
+        }
+    }
+
     private bool isUI = false;
     private void Update() 
     { 

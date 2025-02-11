@@ -370,6 +370,7 @@
 "Assets/Sripts/Systems/MainMenu/MainMenu.cs"
 "Assets/Sripts/UI/UI_BottonPanel.cs"
 "Assets/Sripts/UI/UI_MainMenu.cs"
+"Assets/Sripts/UI/UI_ResultPanel.cs"
 "Assets/Sripts/UI/UI_SettingsPanel.cs"
 "Assets/Sripts/UI/UI_TopPanel.cs"
 "Assets/UI/Sci-Fi UI/Demo_Assets/scripts/GUI_Demo.cs"

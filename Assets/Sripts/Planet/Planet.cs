@@ -13,19 +13,6 @@ public class Planet : MonoBehaviour
 
     [SerializeField] private GameObject bubblePrefab;
     [SerializeField ]private Color[] segmentColors;
-
-    private struct BubblePosition
-    {
-        public Bubble bubble;
-        public Vector3 position;
-
-        public BubblePosition(Bubble bubble, Vector3 position)
-        {
-            this.bubble = bubble;
-            this.position = position;
-        }
-    }
-    private List<BubblePosition> bubbles;
     private int countBubbles;
 
     private bool isRestast;
@@ -37,22 +24,7 @@ public class Planet : MonoBehaviour
         transform.Rotate(Vector3.right * axisTilt);
         countBubbles = 0;
 
-        if(bubbles == null)
-        {
-            bubbles = new List<BubblePosition>();
-            Generate();
-        }
-        else
-        {
-            foreach(BubblePosition current in bubbles)
-            {
-                current.bubble.gameObject.SetActive(true);
-                current.bubble.Restart(current.position);
-            }
-
-            countBubbles = bubbles.Count;
-            StartCoroutine(Rotate());
-        }
+        Generate();
     }
 
     public Color[] GetColors() => segmentColors;
@@ -129,7 +101,6 @@ public class Planet : MonoBehaviour
                     bubble.Initialize(layer, bubbleColor);
 
                     phiBubbles.Add(bubble);
-                    bubbles.Add(new BubblePosition(bubble, spawnPosition));
                     bubble.onFall += UpdateBubbleCount;
                     countBubbles++;
                 }

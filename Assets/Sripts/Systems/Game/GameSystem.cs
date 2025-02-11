@@ -18,6 +18,8 @@ public class GameSystem : MonoBehaviour
     [SerializeField] private Cannon cannon;
     private int score;
 
+    [SerializeField] private GameObject resultPanel;
+
     private void Awake()
     {
         current = this;
@@ -51,12 +53,27 @@ public class GameSystem : MonoBehaviour
         return Mathf.RoundToInt(Mathf.Pow(planets[currentPlanet].GetRadius() + planets[currentPlanet].GetLayers(), 2));
     }
 
+    private bool isExit = false;
+    public void SetExit() => isExit = true;
+
     public void NextPlanet()
     {
+        if(isExit) return;
+        
         planets[currentPlanet].Restart();
         planets[currentPlanet].gameObject.SetActive(false);
         
         currentPlanet++;
+
+        if(currentPlanet >= planets.Count)
+        {
+            // cannon.RemoveProjectile();
+            
+            resultPanel.SetActive(true);
+            resultPanel.GetComponent<UI_ResultPanel>().Show(UI_ResultPanel.E_Result.Victory, score);
+            return;
+        }
+
         planets[currentPlanet].gameObject.SetActive(true);
         planets[currentPlanet].Initialize();
 
@@ -71,9 +88,10 @@ public class GameSystem : MonoBehaviour
 
         if(countProjectiles <= 0)
         {
-            planets[currentPlanet].Restart();
-            planets[currentPlanet].gameObject.SetActive(false);
-            Initialize();
+            // cannon.RemoveProjectile();
+            
+            resultPanel.SetActive(true);
+            resultPanel.GetComponent<UI_ResultPanel>().Show(UI_ResultPanel.E_Result.Lose, score);
         }
     }
 
