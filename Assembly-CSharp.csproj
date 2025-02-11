@@ -66,11 +66,13 @@
   <ItemGroup>
     <Compile Include="Assets/Sripts/Projectile/Projectile.cs" />
     <Compile Include="Assets/UI/_Heathen Engineering/Samples/UX Examples/Flat Icons [Free]/ToggleSetAnimatorBoolean.cs" />
+    <Compile Include="Assets/Sripts/UI/UI_MainMenu.cs" />
     <Compile Include="Assets/Sripts/Cannon/Cannon.cs" />
     <Compile Include="Assets/UI/Sci-Fi UI/Demo_Assets/scripts/GUI_Demo.cs" />
     <Compile Include="Assets/Sripts/Planet/Planet.cs" />
     <Compile Include="Assets/Sripts/UI/UI_TopPanel.cs" />
     <Compile Include="Assets/Sripts/UI/UI_SettingsPanel.cs" />
+    <Compile Include="Assets/Sripts/Systems/MainMenu/MainMenu.cs" />
     <Compile Include="Assets/Sripts/UI/UI_BottonPanel.cs" />
     <Compile Include="Assets/Sripts/Systems/Game/GameSystem.cs" />
     <Compile Include="Assets/Sripts/DestroyArea/DestroyArea.cs" />

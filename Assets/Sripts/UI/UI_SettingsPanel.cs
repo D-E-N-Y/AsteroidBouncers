@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UI_SettingsPanel : MonoBehaviour
@@ -45,6 +46,6 @@ public class UI_SettingsPanel : MonoBehaviour
 
     public void PressQuitButton()
     {
-        Application.Quit();
+        SceneManager.LoadScene("MainMenuScene");
     }
 }
