@@ -57,6 +57,7 @@ public class Cannon : MonoBehaviour
 
     public void ReplaceProjectile()
     {
+        AudioSystem.current.PlaySFX("Click");
         Projectile _projectile = currentProjectile;
 
         replaceProjectile.transform.position = transform.position;
@@ -76,8 +77,6 @@ public class Cannon : MonoBehaviour
 
         if (touch.phase == TouchPhase.Began) 
             isUI = EventSystem.current.IsPointerOverGameObject(touch.fingerId);
-        
-        Debug.Log(isUI);
 
         if(isUI)
             return;
@@ -92,6 +91,7 @@ public class Cannon : MonoBehaviour
 
         if (touch.phase == TouchPhase.Ended)
         {
+            AudioSystem.current.PlaySFX("Fire");
             currentProjectile.StartCoroutine(currentProjectile.Fire(initialVelocity, _angle, direction.normalized, transform));
 
             CreateProjectiles();

@@ -25,6 +25,7 @@ public class UI_TopPanel : MonoBehaviour
 
     public void PressSettingsButton()
     {
+        AudioSystem.current.PlaySFX("Click");
         settingsPanel.SetActive(true);
     }
 }

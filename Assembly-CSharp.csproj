@@ -73,6 +73,7 @@
     <Compile Include="Assets/Sripts/UI/UI_TopPanel.cs" />
     <Compile Include="Assets/Sripts/UI/UI_SettingsPanel.cs" />
     <Compile Include="Assets/Sripts/Systems/MainMenu/MainMenu.cs" />
+    <Compile Include="Assets/Sripts/Systems/Audio/AudioSystem.cs" />
     <Compile Include="Assets/Sripts/UI/UI_BottonPanel.cs" />
     <Compile Include="Assets/Sripts/Systems/Game/GameSystem.cs" />
     <Compile Include="Assets/Sripts/DestroyArea/DestroyArea.cs" />

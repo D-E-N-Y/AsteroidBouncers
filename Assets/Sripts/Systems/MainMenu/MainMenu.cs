@@ -12,5 +12,6 @@ public class MainMenu : MonoBehaviour
         
         planets[currentPlanet].gameObject.SetActive(true);
         planets[currentPlanet].Initialize();
+        planets[currentPlanet].Restart();
     }
 }

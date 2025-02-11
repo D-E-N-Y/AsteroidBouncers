@@ -41,6 +41,7 @@ public class Projectile : MonoBehaviour
                 bubble.Fall();
             }
 
+            AudioSystem.current.PlaySFX("Boom");
             Destroy(gameObject);
         }
     }

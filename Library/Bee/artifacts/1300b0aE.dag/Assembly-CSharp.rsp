@@ -365,6 +365,7 @@
 "Assets/Sripts/DestroyArea/DestroyArea.cs"
 "Assets/Sripts/Planet/Planet.cs"
 "Assets/Sripts/Projectile/Projectile.cs"
+"Assets/Sripts/Systems/Audio/AudioSystem.cs"
 "Assets/Sripts/Systems/Game/GameSystem.cs"
 "Assets/Sripts/Systems/MainMenu/MainMenu.cs"
 "Assets/Sripts/UI/UI_BottonPanel.cs"

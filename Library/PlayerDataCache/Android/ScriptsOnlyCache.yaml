@@ -1,6 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AudioSystem
     - Bubble
     - Cannon
     - DestroyArea
@@ -50,6 +51,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.VerticalLayoutGroup
   serializedClasses:
     Assembly-CSharp:
+    - AudioSystem/Sound
     - UI_SettingsPanel/OnOffImage
     Unity.TextMeshPro:
     - TMPro.FaceInfo_Legacy
@@ -102,7 +104,13 @@ ScriptsOnlyBuild:
     methodName: PressSettingsButton
   - assembly: Assembly-CSharp
     fullTypeName: UI_SettingsPanel
+    methodName: MusicVolume
+  - assembly: Assembly-CSharp
+    fullTypeName: UI_SettingsPanel
     methodName: PressMusicButton
+  - assembly: Assembly-CSharp
+    fullTypeName: UI_SettingsPanel
+    methodName: SFXVolume
   - assembly: Assembly-CSharp
     fullTypeName: UI_SettingsPanel
     methodName: PressSoundButton
@@ -117,7 +125,13 @@ ScriptsOnlyBuild:
     methodName: ReplaceProjectile
   - assembly: Assembly-CSharp
     fullTypeName: UI_SettingsPanel
+    methodName: MusicVolume
+  - assembly: Assembly-CSharp
+    fullTypeName: UI_SettingsPanel
     methodName: PressMusicButton
+  - assembly: Assembly-CSharp
+    fullTypeName: UI_SettingsPanel
+    methodName: SFXVolume
   - assembly: Assembly-CSharp
     fullTypeName: UI_TopPanel
     methodName: PressSettingsButton
@@ -240,6 +254,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 104
@@ -248,8 +266,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 16704}
-    - Class: 114
-      Script: {instanceID: 16810}
     - Class: 114
       Script: {instanceID: 16830}
     - Class: 114
@@ -275,8 +291,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 20678}
     - Class: 114
-      Script: {instanceID: 20744}
-    - Class: 114
       Script: {instanceID: 20840}
     - Class: 114
       Script: {instanceID: 21160}
@@ -290,9 +304,9 @@ ScriptsOnlyBuild:
       Script: {instanceID: 63778}
     - Class: 114
       Script: {instanceID: 70400}
+    - Class: 114
+      Script: {instanceID: 92178}
     - Class: 115
-      Script: {instanceID: 0}
-    - Class: 120
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
@@ -1195,7 +1209,7 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   - hash:
       serializedVersion: 2
-      Hash: d6e50abb4158d48f0858a969f682f7f2
+      Hash: 7074273a32a0bb16c44a48ee18bbdb7e
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: UI_SettingsPanel
@@ -1211,6 +1225,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: MainMenu
+  - hash:
+      serializedVersion: 2
+      Hash: eb417eb5697bed913a5b29164ba4baf2
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: AudioSystem
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainMenuScene.unity

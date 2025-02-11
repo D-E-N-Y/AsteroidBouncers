@@ -14,9 +14,4 @@ public class UI_BottonPanel : MonoBehaviour
     {
         countProjectilesText.text = count.ToString();
     }
-
-    public void PressReplaceProjectileButton()
-    {
-        
-    }
 }

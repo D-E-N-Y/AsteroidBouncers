@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class UI_SettingsPanel : MonoBehaviour
 {
+    [SerializeField] private Slider musicVolumeSlider;
+    [SerializeField] private Slider sfxVolumeSlider;
+    
     [Serializable]
     private struct OnOffImage
     {
@@ -18,34 +21,57 @@ public class UI_SettingsPanel : MonoBehaviour
         }
     }
     [SerializeField] private OnOffImage musicImages;
-    private bool isMusic = true;
-    
     [SerializeField] private OnOffImage soundImages;
-    private bool isSound = true;
+
+    void Start()
+    {
+        musicImages.onImage.gameObject.SetActive(!AudioSystem.current.isMuteMusic());
+        musicImages.offImage.gameObject.SetActive(AudioSystem.current.isMuteMusic());
+
+        soundImages.onImage.gameObject.SetActive(!AudioSystem.current.isMuteSFX());
+        soundImages.offImage.gameObject.SetActive(AudioSystem.current.isMuteSFX());
+
+        musicVolumeSlider.value = AudioSystem.current.GetVolumeMusic();
+        sfxVolumeSlider.value = AudioSystem.current.GetVolumeSFX();
+    }
 
     public void PressMusicButton()
     {
-        isMusic = !isMusic;
-
-        musicImages.onImage.gameObject.SetActive(isMusic);
-        musicImages.offImage.gameObject.SetActive(!isMusic);
+        AudioSystem.current.PlaySFX("Click");
+        
+        AudioSystem.current.ToggleMusic();
+        musicImages.onImage.gameObject.SetActive(!AudioSystem.current.isMuteMusic());
+        musicImages.offImage.gameObject.SetActive(AudioSystem.current.isMuteMusic());
     }
 
     public void PressSoundButton()
     {
-        isSound = !isSound;
-
-        soundImages.onImage.gameObject.SetActive(isSound);
-        soundImages.offImage.gameObject.SetActive(!isSound);
+        AudioSystem.current.PlaySFX("Click");
+        
+        AudioSystem.current.ToggleSFX();
+        soundImages.onImage.gameObject.SetActive(!AudioSystem.current.isMuteSFX());
+        soundImages.offImage.gameObject.SetActive(AudioSystem.current.isMuteSFX());
     }
 
     public void PressContinueButton()
     {
+        AudioSystem.current.PlaySFX("Click");
         gameObject.SetActive(false);
     }
 
     public void PressQuitButton()
     {
+        AudioSystem.current.PlaySFX("Click");
         SceneManager.LoadScene("MainMenuScene");
+    }
+
+    public void MusicVolume()
+    {
+        AudioSystem.current.MusicVolume(musicVolumeSlider.value);
+    }
+
+    public void SFXVolume()
+    {
+        AudioSystem.current.SFXVolume(sfxVolumeSlider.value);
     }
 }
