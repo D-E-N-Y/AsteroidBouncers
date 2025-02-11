@@ -25,16 +25,16 @@ public class GameSystem : MonoBehaviour
 
     private void Start()
     {
-        ui_TopPanel.Initialize();
-        ui_BottonPanel.Initialize();
-        
         Initialize();
     }
 
     private void Initialize()
     {
         score = 0;
-        currentPlanet = 5;
+        currentPlanet = 0;
+
+        ui_TopPanel.Initialize();
+        ui_BottonPanel.Initialize();
 
         planets[currentPlanet].gameObject.SetActive(true);
         planets[currentPlanet].Initialize();

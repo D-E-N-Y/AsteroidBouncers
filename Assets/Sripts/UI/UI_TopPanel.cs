@@ -5,6 +5,7 @@ public class UI_TopPanel : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI namePlanetText;
     [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private GameObject settingsPanel;
 
     public void Initialize()
     {
@@ -24,6 +25,6 @@ public class UI_TopPanel : MonoBehaviour
 
     public void PressSettingsButton()
     {
-        
+        settingsPanel.SetActive(true);
     }
 }
