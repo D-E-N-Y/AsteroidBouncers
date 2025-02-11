@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Planet : MonoBehaviour
@@ -51,6 +52,7 @@ public class Planet : MonoBehaviour
                 if (segmentsPhi < 1) segmentsPhi = 1;
                 float stepPhi = 2 * Mathf.PI / segmentsPhi;
 
+                List<Bubble> phiBubbles = new List<Bubble>();
 
                 for (float phi = 0; phi < 2 * Mathf.PI; phi += stepPhi)
                 {
@@ -59,6 +61,22 @@ public class Planet : MonoBehaviour
                     float z = center.z + radius * Mathf.Cos(theta);
 
                     Vector3 spawnPosition = new Vector3(x, y, z);
+
+                    if(phiBubbles.Count > 0)
+                    {
+                        bool isBusy = false;
+                        
+                        foreach(Bubble phiBubble in phiBubbles)
+                        {
+                            if(Vector3.Distance(phiBubble.transform.position, spawnPosition) < 0.1f)
+                            {
+                                isBusy = true;
+                                break;
+                            }
+                        }
+
+                        if(isBusy) continue;
+                    }
 
                     int indexTheta = Mathf.FloorToInt((theta / Mathf.PI) * segmentColors.Length);
                     int indexPhi = Mathf.FloorToInt((phi / (2 * Mathf.PI)) * segmentColors.Length);
@@ -73,6 +91,7 @@ public class Planet : MonoBehaviour
                     bubble.transform.SetParent(transform);
                     bubble.Initialize(layer, bubbleColor);
 
+                    phiBubbles.Add(bubble);
                     bubble.onFall += UpdateBubbleCount;
                     countBubbles++;
                 }
