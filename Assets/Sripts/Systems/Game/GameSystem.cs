@@ -34,7 +34,7 @@ public class GameSystem : MonoBehaviour
     private void Initialize()
     {
         score = 0;
-        currentPlanet = 0;
+        currentPlanet = 5;
 
         planets[currentPlanet].gameObject.SetActive(true);
         planets[currentPlanet].Initialize();
@@ -48,7 +48,7 @@ public class GameSystem : MonoBehaviour
 
     private int CalculateCountProjectiles()
     {
-        return Mathf.RoundToInt(Mathf.Pow(planets[currentPlanet].GetRadius(), 2));
+        return Mathf.RoundToInt(Mathf.Pow(planets[currentPlanet].GetRadius() + planets[currentPlanet].GetLayers(), 2));
     }
 
     public void NextPlanet()

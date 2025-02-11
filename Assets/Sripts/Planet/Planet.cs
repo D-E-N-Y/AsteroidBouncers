@@ -6,7 +6,7 @@ public class Planet : MonoBehaviour
 {
     [SerializeField] private string namePlanet;
     [SerializeField] private float radius;
-    [SerializeField] private float layers;
+    [SerializeField] private int layers;
 
     [SerializeField] private float speedRotate;
     [SerializeField] private float axisTilt;
@@ -58,6 +58,7 @@ public class Planet : MonoBehaviour
     public Color[] GetColors() => segmentColors;
     public string GetName() => namePlanet;
     public float GetRadius() => radius;
+    public int GetLayers() => layers;
 
     private IEnumerator Rotate()
     {

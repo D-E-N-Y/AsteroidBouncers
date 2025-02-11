@@ -314,6 +314,8 @@
 "Assets/Sripts/Planet/Planet.cs"
 "Assets/Sripts/Projectile/Projectile.cs"
 "Assets/Sripts/Systems/Game/GameSystem.cs"
+"Assets/Sripts/UI/UI_BottonPanel.cs"
+"Assets/Sripts/UI/UI_TopPanel.cs"
 "Assets/UI/Sci-Fi UI/Demo_Assets/scripts/GUI_Demo.cs"
 "Assets/UI/_Heathen Engineering/Samples/UX Examples/Flat Icons [Free]/ToggleSetAnimatorBoolean.cs"
 -langversion:9.0
