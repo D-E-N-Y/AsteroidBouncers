@@ -14,6 +14,8 @@ public class Planet : MonoBehaviour
 
     private void Start() 
     {
+        transform.Rotate(Vector3.right * axisTilt);
+
         Generate();
     }
 
