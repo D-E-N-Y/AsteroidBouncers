@@ -3407,3 +3407,415 @@ WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing tex
  -> (artifact id: 'c25a6cee4cdd6df700bed6389be0d85e') in 0.008448 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 3
+========================================================================
+Received Prepare
+Assembly with name 'HeathenEngineering.UX' already exists (Assets/_Heathen Engineering/Assets/UX/HeathenEngineering.UX.asmdef)
+Assembly with name 'HeathenEngineering.UX' already exists (Assets/UI/_Heathen Engineering/Assets/UX/HeathenEngineering.UX.asmdef)
+Assembly with name 'HeathenEngineering.UX' already exists (Assets/_Heathen Engineering/Assets/UX/HeathenEngineering.UX.asmdef)
+Assembly with name 'HeathenEngineering.UX' already exists (Assets/UI/_Heathen Engineering/Assets/UX/HeathenEngineering.UX.asmdef)
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.404 seconds
+Refreshing native plugins compatible for Editor in 1.62 ms, found 0 plugins.
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for OSXStandalone target not found
+Assembly with name 'HeathenEngineering.UX' already exists (Assets/_Heathen Engineering/Assets/UX/HeathenEngineering.UX.asmdef)
+Assembly with name 'HeathenEngineering.UX' already exists (Assets/UI/_Heathen Engineering/Assets/UX/HeathenEngineering.UX.asmdef)
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.859 seconds
+Domain Reload Profiling: 1263ms
+	BeginReloadAssembly (128ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (35ms)
+	RebuildCommonClasses (39ms)
+	RebuildNativeTypeToScriptingClass (10ms)
+	initialDomainReloadingComplete (31ms)
+	LoadAllAssembliesAndSetupDomain (195ms)
+		LoadAssemblies (231ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (22ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (7ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (860ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (491ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (62ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (84ms)
+			ProcessInitializeOnLoadAttributes (315ms)
+			ProcessInitializeOnLoadMethodAttributes (21ms)
+			AfterProcessingInitializeOnLoad (7ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (4ms)
+Refreshing native plugins compatible for Editor in 1.19 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3112 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 25 unused Assets / (31.6 KB). Loaded Objects now: 3773.
+Memory consumption went from 132.4 MB to 132.4 MB.
+Total: 3.395558 ms (FindLiveObjects: 0.245310 ms CreateObjectMapping: 0.077475 ms MarkObjects: 3.032326 ms  DeleteObjects: 0.039354 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: 232f87dd983dbecb2a4e21e08eb2cef8 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 410.838266 seconds.
+  path: Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Move In Icon.png
+  artifactKey: Guid(fb23ae9c9c616a34a808b7e87e761a4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Move In Icon.png using Guid(fb23ae9c9c616a34a808b7e87e761a4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'd379ed03eefcd551d932c7e42c3cebbe') in 0.067497 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.040977 seconds.
+  path: Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Move In_1 Icon.png
+  artifactKey: Guid(033336c308c8eb048a200b88b4c9012f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Move In_1 Icon.png using Guid(033336c308c8eb048a200b88b4c9012f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'e0060c37f4309dc580bbb28263179299') in 0.012487 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Music No Dashless Icon.png
+  artifactKey: Guid(547bb804169b8084a8523d172c156a03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Music No Dashless Icon.png using Guid(547bb804169b8084a8523d172c156a03) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '643a7bd5704c44a1b4e5cea9c0ccc5f8') in 0.009311 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000236 seconds.
+  path: Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Mute Icon.png
+  artifactKey: Guid(b63baeb07a1575b458e8570f910dbc41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Mute Icon.png using Guid(b63baeb07a1575b458e8570f910dbc41) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '3fb59a1e584f13e2acd33251a0564341') in 0.008164 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Music No Dash Icon.png
+  artifactKey: Guid(68398e08cb2ba1d419e4d40d1cbf9249) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Music No Dash Icon.png using Guid(68398e08cb2ba1d419e4d40d1cbf9249) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'e071b6e4305e87da8532b7eb48258dd7') in 0.007176 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.149614 seconds.
+  path: Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat People 1 Icon.png
+  artifactKey: Guid(e779ad32171e85f49bbebec977f04411) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat People 1 Icon.png using Guid(e779ad32171e85f49bbebec977f04411) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'b32effc212756c58fb82058362587c52') in 0.008353 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Person Icon.png
+  artifactKey: Guid(cac9f704575bbe744b68791d16b1806a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Person Icon.png using Guid(cac9f704575bbe744b68791d16b1806a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'ea072a19be2b74f255ccfdd0ae55a463') in 0.007843 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Toggle Left Icon.png
+  artifactKey: Guid(fdff4e51aa5b6a64287fb2f9a0b10bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Toggle Left Icon.png using Guid(fdff4e51aa5b6a64287fb2f9a0b10bc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '1ab760b917499b4aede0a486c0d16ea2') in 0.008887 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat People 3 Icon.png
+  artifactKey: Guid(8cac3f9b9c687694f93a46e1b6aaf3aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat People 3 Icon.png using Guid(8cac3f9b9c687694f93a46e1b6aaf3aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'da60a6b8a1096c031e18b92fc478251f') in 0.008677 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Signal Up 011 Icon.png
+  artifactKey: Guid(bbcbf804e83d1bd4ea93dbd6d941636e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Signal Up 011 Icon.png using Guid(bbcbf804e83d1bd4ea93dbd6d941636e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'c1d6ff219c1f0e93cfaede564c36a898') in 0.009725 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Signal Up 2 Icon.png
+  artifactKey: Guid(0eb838ecab1c6554cb140a94de6ce907) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Signal Up 2 Icon.png using Guid(0eb838ecab1c6554cb140a94de6ce907) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '4de0aa15231ee13566f2f410be8ac1e4') in 0.010413 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Toggle Centre Icon.png
+  artifactKey: Guid(da098e9c51c4f7d42bd00970713bfc95) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Toggle Centre Icon.png using Guid(da098e9c51c4f7d42bd00970713bfc95) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '362ef69e45ebad6b19a4eac24590f64f') in 0.009598 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Star Filled Icon.png
+  artifactKey: Guid(0579b86233f138a43b5a174d669f362b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Star Filled Icon.png using Guid(0579b86233f138a43b5a174d669f362b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '06809bdcc64b87cb7d0e3c4c9c95ae6e') in 0.008819 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Toggle Right Icon.png
+  artifactKey: Guid(1023dc51a47ee2646b092add613fd71f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Toggle Right Icon.png using Guid(1023dc51a47ee2646b092add613fd71f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'b1fdedfda4c7135944cb94c8c5752b03') in 0.009479 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Signal Up 101 Icon.png
+  artifactKey: Guid(b5d747335d1bafb43915c028619955af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Signal Up 101 Icon.png using Guid(b5d747335d1bafb43915c028619955af) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '1865beb91b28736c30bb073438ec02ef') in 0.009582 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Thumbs Up Icon.png
+  artifactKey: Guid(a38d763eb32ea12439af1cd4b07db735) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Thumbs Up Icon.png using Guid(a38d763eb32ea12439af1cd4b07db735) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'dc72368a17c460ac2f05ab16c72ede8e') in 0.008969 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.034816 seconds.
+  path: Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Toggle Thumb Right Icon.png
+  artifactKey: Guid(2514675ace6b54a4b86f2e955361c8dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Toggle Thumb Right Icon.png using Guid(2514675ace6b54a4b86f2e955361c8dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'f5e5cd3eea337476255b79f7b7e3b4e0') in 0.007246 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Volume 2 Icon.png
+  artifactKey: Guid(4ce0634a6bcefab4c8b2dd9468b7a46a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Volume 2 Icon.png using Guid(4ce0634a6bcefab4c8b2dd9468b7a46a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'ef38f4041fc261d0d35ed45baedf0c45') in 0.007594 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000075 seconds.
+  path: Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Upload 2 Icon.png
+  artifactKey: Guid(e9923c6d5bf099243b4b1ce45e68853a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Upload 2 Icon.png using Guid(e9923c6d5bf099243b4b1ce45e68853a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '55f2f470e0a43a58a7a42ce2bbaba6ef') in 0.007207 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Volume 0 Icon.png
+  artifactKey: Guid(f339c25a4bc8a7642bdf4d4d8194ec18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Volume 0 Icon.png using Guid(f339c25a4bc8a7642bdf4d4d8194ec18) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'ad5d5c9c659dbf95cb6d77041bfffafe') in 0.008621 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Volume 4 Icon.png
+  artifactKey: Guid(e9b63031b6e86be44adab37645278daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Volume 4 Icon.png using Guid(e9b63031b6e86be44adab37645278daf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '3c69b73530eff440204748306aff9617') in 0.009753 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Volume 5 Icon.png
+  artifactKey: Guid(052913ff636054540b70d52173eccf89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UI/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Volume 5 Icon.png using Guid(052913ff636054540b70d52173eccf89) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '04ea93e543e1842eaa816e4ed1f6e799') in 0.009938 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 108.383415 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset
+  artifactKey: Guid(8f586378b4e144a9851e7b34d9b748ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset using Guid(8f586378b4e144a9851e7b34d9b748ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '557165308fe75c8badd10f97b3e131c7') in 0.154189 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 10
+========================================================================
+Received Import Request.
+  Time since last request: 107.294781 seconds.
+  path: Assets/Fonts
+  artifactKey: Guid(f575e305399cb3cfe9c08962517c8dc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fonts using Guid(f575e305399cb3cfe9c08962517c8dc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '9147c938305c66de97ff11e58cb3c16b') in 0.000579 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 90.236394 seconds.
+  path: Assets/Fonts/Sdroboticsdemo-X3led.ttf
+  artifactKey: Guid(25d820f85dc1d17e395bbb832e11d381) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fonts/Sdroboticsdemo-X3led.ttf using Guid(25d820f85dc1d17e395bbb832e11d381) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'd7082180c3f9726fb4c7762389ee77ea') in 0.015381 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 28.329918 seconds.
+  path: Assets/Fonts/Sdroboticsdemo-X3led SDF.asset
+  artifactKey: Guid(6619c2a5f812c1a89834c01d10367f23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fonts/Sdroboticsdemo-X3led SDF.asset using Guid(6619c2a5f812c1a89834c01d10367f23) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+Shader 'TextMeshPro/Distance Field': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'ce0de70984b88ee644ec627f5c8f9850') in 0.101307 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 12.709557 seconds.
+  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
+  artifactKey: Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset using Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'f44b489b347c10a77fffad08f9a1d558') in 0.021158 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 17.842831 seconds.
+  path: Assets/Fonts/Sdroboticsdemo-X3led SDF.asset
+  artifactKey: Guid(6619c2a5f812c1a89834c01d10367f23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fonts/Sdroboticsdemo-X3led SDF.asset using Guid(6619c2a5f812c1a89834c01d10367f23) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+Shader 'TextMeshPro/Distance Field': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '9215d3f8e31923499688dd4da5a182df') in 0.018776 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 43.535806 seconds.
+  path: Assets/Fonts/Sdroboticsdemo-X3led SDF.asset
+  artifactKey: Guid(6619c2a5f812c1a89834c01d10367f23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Fonts/Sdroboticsdemo-X3led SDF.asset using Guid(6619c2a5f812c1a89834c01d10367f23) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+Shader 'TextMeshPro/Distance Field': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '444dd2c0e5b0758e07b7c2183ea9e288') in 0.032543 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 1.27 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 13 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 12 unused Assets / (502.9 KB). Loaded Objects now: 3776.
+Memory consumption went from 87.7 MB to 87.2 MB.
+Total: 4.438494 ms (FindLiveObjects: 0.225844 ms CreateObjectMapping: 0.059802 ms MarkObjects: 3.848778 ms  DeleteObjects: 0.303029 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: 232f87dd983dbecb2a4e21e08eb2cef8 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 

@@ -20,10 +20,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1264
+    x: 1308
     y: 109
-    width: 605
-    height: 690
+    width: 563
+    height: 661
   m_SerializedDataModeController:
     m_DataMode: 0
     m_PreferredDataMode: 0
@@ -76,23 +76,23 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 605
-      height: 669
-    m_Scale: {x: 0.26132813, y: 0.26132813}
-    m_Translation: {x: 302.5, y: 334.5}
+      width: 563
+      height: 640
+    m_Scale: {x: 0.25, y: 0.25}
+    m_Translation: {x: 281.5, y: 320}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -1157.5486
+      x: -1126
       y: -1280
-      width: 2315.0972
+      width: 2252
       height: 2560
     m_MinimalGUI: 1
-  m_defaultScale: 0.26132813
-  m_LastWindowPixelSize: {x: 605, y: 690}
+  m_defaultScale: 0.25
+  m_LastWindowPixelSize: {x: 563, y: 661}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000001000000000000

@@ -6774,3 +6774,8 @@ WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing tex
  -> (artifact id: 'b64b8f421e29e8b8b72385be55140f1e') in 0.008269 seconds
 Number of updated asset objects reloaded before import = 0
 Number of asset objects unloaded after import = 3
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+AssetImportWorker is now disconnected from the server
+Process exiting
