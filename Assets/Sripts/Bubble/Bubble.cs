@@ -1,8 +1,11 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Bubble : MonoBehaviour
 {
+    public Action onFall;
+    
     public Color color { get; private set; }
     private MeshRenderer meshRenderer;
 
@@ -27,19 +30,10 @@ public class Bubble : MonoBehaviour
         isFall = false;
     }
 
-    private Color RandomColor()
-    {
-        Color[] colors = {
-            new Color(1f, 0f, 0f, 1f),
-            new Color(0f, 1f, 0f, 1f),
-            new Color(0f, 0f, 1f, 1f)
-        };
-        
-        return colors[Random.Range(0, colors.Length)];
-    }
-
     public void Fall()
     {
+        onFall?.Invoke();
+
         isFall = true;
         _rigidbody.isKinematic = !isFall;
 

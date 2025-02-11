@@ -6,22 +6,12 @@ public class Projectile : MonoBehaviour
     private MeshRenderer meshRenderer;
     private Color color;
 
-    public void Initialize()
+    public void Initialize(Color color)
     {
-        meshRenderer = GetComponent<MeshRenderer>();
-        color = RandomColor();
-        meshRenderer.material.color = color;
-    }
-
-    private Color RandomColor()
-    {
-        Color[] colors = {
-            new Color(1f, 0f, 0f, 1f),
-            new Color(0f, 1f, 0f, 1f),
-            new Color(0f, 0f, 1f, 1f)
-        };
+        this.color = color;
         
-        return colors[Random.Range(0, colors.Length)];
+        meshRenderer = GetComponent<MeshRenderer>();
+        meshRenderer.material.color = color;
     }
 
     public IEnumerator Fire(float velocity, float angle, Vector3 direction, Transform firePoint)

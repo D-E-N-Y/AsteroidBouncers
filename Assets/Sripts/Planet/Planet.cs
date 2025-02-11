@@ -12,12 +12,17 @@ public class Planet : MonoBehaviour
     [SerializeField] private GameObject bubblePrefab;
     [SerializeField ]private Color[] segmentColors;
 
-    private void Start() 
+    private int countBubbles;
+
+    public void Initialize() 
     {
         transform.Rotate(Vector3.right * axisTilt);
+        countBubbles = 0;
 
         Generate();
     }
+
+    public Color[] GetColors() => segmentColors;
 
     private IEnumerator Rotate()
     {
@@ -67,11 +72,24 @@ public class Planet : MonoBehaviour
                     Bubble bubble = Instantiate(bubblePrefab, spawnPosition, Quaternion.identity).GetComponent<Bubble>();
                     bubble.transform.SetParent(transform);
                     bubble.Initialize(layer, bubbleColor);
+
+                    bubble.onFall += UpdateBubbleCount;
+                    countBubbles++;
                 }
             }
             radius -= bubbleDiameter;
         }
 
         StartCoroutine(Rotate());
+    }
+
+    private void UpdateBubbleCount()
+    {
+        countBubbles--;
+
+        if(countBubbles <= 0)
+        {
+            GameSystem.current.NextPlanet();
+        }
     }
 }

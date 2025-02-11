@@ -26,39 +26,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 331549627965124809, guid: 2dca97e24498cf84ca60244f86ed1afc, type: 3}
       propertyPath: segmentColors.Array.data[0].b
-      value: 0
+      value: 0.05490196
       objectReference: {fileID: 0}
     - target: {fileID: 331549627965124809, guid: 2dca97e24498cf84ca60244f86ed1afc, type: 3}
       propertyPath: segmentColors.Array.data[0].g
-      value: 0.7264151
+      value: 0.735849
       objectReference: {fileID: 0}
     - target: {fileID: 331549627965124809, guid: 2dca97e24498cf84ca60244f86ed1afc, type: 3}
       propertyPath: segmentColors.Array.data[0].r
-      value: 0.19159031
+      value: 0.23529412
       objectReference: {fileID: 0}
     - target: {fileID: 331549627965124809, guid: 2dca97e24498cf84ca60244f86ed1afc, type: 3}
       propertyPath: segmentColors.Array.data[1].b
-      value: 0
+      value: 0.05490196
       objectReference: {fileID: 0}
     - target: {fileID: 331549627965124809, guid: 2dca97e24498cf84ca60244f86ed1afc, type: 3}
       propertyPath: segmentColors.Array.data[1].g
-      value: 0.7294118
+      value: 0.7372549
       objectReference: {fileID: 0}
     - target: {fileID: 331549627965124809, guid: 2dca97e24498cf84ca60244f86ed1afc, type: 3}
       propertyPath: segmentColors.Array.data[1].r
-      value: 0.19215687
+      value: 0.23529412
       objectReference: {fileID: 0}
     - target: {fileID: 331549627965124809, guid: 2dca97e24498cf84ca60244f86ed1afc, type: 3}
       propertyPath: segmentColors.Array.data[2].b
-      value: 0
+      value: 0.05490196
       objectReference: {fileID: 0}
     - target: {fileID: 331549627965124809, guid: 2dca97e24498cf84ca60244f86ed1afc, type: 3}
       propertyPath: segmentColors.Array.data[2].g
-      value: 0.7294118
+      value: 0.7372549
       objectReference: {fileID: 0}
     - target: {fileID: 331549627965124809, guid: 2dca97e24498cf84ca60244f86ed1afc, type: 3}
       propertyPath: segmentColors.Array.data[2].r
-      value: 0.19215687
+      value: 0.23529412
       objectReference: {fileID: 0}
     - target: {fileID: 331549627965124809, guid: 2dca97e24498cf84ca60244f86ed1afc, type: 3}
       propertyPath: segmentColors.Array.data[3].a

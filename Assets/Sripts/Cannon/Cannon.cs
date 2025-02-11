@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Cannon : MonoBehaviour 
@@ -10,11 +11,19 @@ public class Cannon : MonoBehaviour
 
     [SerializeField] private GameObject projectilePrefab;
     private Projectile projectile;
+    private Color[] colors;
 
-    private void Start() 
+    public void Initialize(Color[] colors) 
     {
+        this.colors = colors;
+        
+        if(projectile)
+        {
+            Destroy(projectile.gameObject);
+        }
+
         projectile = Instantiate(projectilePrefab, transform.position, transform.rotation).GetComponent<Projectile>();
-        projectile.Initialize();
+        projectile.Initialize(colors[Random.Range(0, colors.Length)]);
     }
 
     private void Update() 
@@ -34,7 +43,7 @@ public class Cannon : MonoBehaviour
             projectile.StartCoroutine(projectile.Fire(initialVelocity, _angle, direction.normalized, transform));
 
             projectile = Instantiate(projectilePrefab, transform.position, transform.rotation).GetComponent<Projectile>();
-            projectile.Initialize();
+            projectile.Initialize(colors[Random.Range(0, colors.Length)]);
 
             transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             transform.localRotation = Quaternion.Euler(0f, 0f, 0f);

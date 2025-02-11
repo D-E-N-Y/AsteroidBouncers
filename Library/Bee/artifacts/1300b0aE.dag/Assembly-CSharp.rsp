@@ -364,6 +364,7 @@
 "Assets/Sripts/Cannon/Cannon.cs"
 "Assets/Sripts/Planet/Planet.cs"
 "Assets/Sripts/Projectile/Projectile.cs"
+"Assets/Sripts/Systems/Game/GameSystem.cs"
 -langversion:9.0
 /deterministic
 /optimize+
