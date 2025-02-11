@@ -6,7 +6,7 @@ public class UI_TopPanel : MonoBehaviour
     [SerializeField] private TextMeshProUGUI namePlanetText;
     [SerializeField] private TextMeshProUGUI scoreText;
 
-    public void Ininitialize()
+    public void Initialize()
     {
         GameSystem.current.UpdateNamePlanet += RefreshNamePlanetText;
         GameSystem.current.UpdateScore += RefreshScoreText;

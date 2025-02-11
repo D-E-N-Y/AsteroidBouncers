@@ -7,6 +7,7 @@ public class GameSystem : MonoBehaviour
     public static GameSystem current;
     public Action<string> UpdateNamePlanet;
     public Action<int> UpdateScore;
+    public Action<int> UpdateCountProjectiles;
 
     [SerializeField] private UI_TopPanel ui_TopPanel;
     [SerializeField] private UI_BottonPanel ui_BottonPanel;
@@ -24,11 +25,16 @@ public class GameSystem : MonoBehaviour
 
     private void Start()
     {
+        ui_TopPanel.Initialize();
+        ui_BottonPanel.Initialize();
+        
+        Initialize();
+    }
+
+    private void Initialize()
+    {
         score = 0;
         currentPlanet = 0;
-        
-        ui_TopPanel.Ininitialize();
-        // ui_BottonPanel.Ininitialize();
 
         planets[currentPlanet].gameObject.SetActive(true);
         planets[currentPlanet].Initialize();
@@ -37,11 +43,17 @@ public class GameSystem : MonoBehaviour
         UpdateScore?.Invoke(score);
 
         cannon.gameObject.SetActive(true);
-        cannon.Initialize(planets[currentPlanet].GetColors());
+        cannon.Initialize(planets[currentPlanet].GetColors(), CalculateCountProjectiles());
+    }
+
+    private int CalculateCountProjectiles()
+    {
+        return Mathf.RoundToInt(Mathf.Pow(planets[currentPlanet].GetRadius(), 2));
     }
 
     public void NextPlanet()
     {
+        planets[currentPlanet].Restart();
         planets[currentPlanet].gameObject.SetActive(false);
         
         currentPlanet++;
@@ -50,7 +62,19 @@ public class GameSystem : MonoBehaviour
 
         UpdateNamePlanet?.Invoke(planets[currentPlanet].GetName());
 
-        cannon.Initialize(planets[currentPlanet].GetColors());
+        cannon.Initialize(planets[currentPlanet].GetColors(), CalculateCountProjectiles());
+    }
+
+    public void CheckCountProjectiles(int countProjectiles)
+    {
+        UpdateCountProjectiles?.Invoke(countProjectiles);
+
+        if(countProjectiles <= 0)
+        {
+            planets[currentPlanet].Restart();
+            planets[currentPlanet].gameObject.SetActive(false);
+            Initialize();
+        }
     }
 
     public void AddScore()

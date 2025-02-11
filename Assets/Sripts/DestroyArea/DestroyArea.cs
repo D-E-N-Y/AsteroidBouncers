@@ -6,7 +6,7 @@ public class DestroyArea : MonoBehaviour
     {
         if(other.gameObject.GetComponent<Bubble>())
         {
-            Destroy(other.gameObject);
+            other.gameObject.SetActive(false);
         }
     }
 }

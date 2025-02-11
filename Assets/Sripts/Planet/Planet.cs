@@ -14,18 +14,50 @@ public class Planet : MonoBehaviour
     [SerializeField] private GameObject bubblePrefab;
     [SerializeField ]private Color[] segmentColors;
 
+    private struct BubblePosition
+    {
+        public Bubble bubble;
+        public Vector3 position;
+
+        public BubblePosition(Bubble bubble, Vector3 position)
+        {
+            this.bubble = bubble;
+            this.position = position;
+        }
+    }
+    private List<BubblePosition> bubbles;
     private int countBubbles;
+
+    private bool isRestast;
 
     public void Initialize() 
     {
+        isRestast = false;
+        
         transform.Rotate(Vector3.right * axisTilt);
         countBubbles = 0;
 
-        Generate();
+        if(bubbles == null)
+        {
+            bubbles = new List<BubblePosition>();
+            Generate();
+        }
+        else
+        {
+            foreach(BubblePosition current in bubbles)
+            {
+                current.bubble.gameObject.SetActive(true);
+                current.bubble.Restart(current.position);
+            }
+
+            countBubbles = bubbles.Count;
+            StartCoroutine(Rotate());
+        }
     }
 
     public Color[] GetColors() => segmentColors;
     public string GetName() => namePlanet;
+    public float GetRadius() => radius;
 
     private IEnumerator Rotate()
     {
@@ -38,19 +70,21 @@ public class Planet : MonoBehaviour
 
     private void Generate()
     {    
+        float _radius = radius;
+        
         float bubbleDiameter = bubblePrefab.GetComponent<SphereCollider>().radius * 1.7f * bubblePrefab.transform.localScale.x;
         int randomOffset = Random.Range(0, segmentColors.Length); // Рандомный сдвиг цветов
-
+        
         for(int layer = 0; layer < layers; layer++)
         {
-            int segmentsTheta = Mathf.RoundToInt((Mathf.PI * radius) / bubbleDiameter);
+            int segmentsTheta = Mathf.RoundToInt((Mathf.PI * _radius) / bubbleDiameter);
             float stepTheta = Mathf.PI / segmentsTheta;
 
             Vector3 center = transform.position;
 
             for (float theta = 0; theta < Mathf.PI + stepTheta; theta += stepTheta)
             {
-                int segmentsPhi = Mathf.RoundToInt((2 * Mathf.PI * radius * Mathf.Sin(theta)) / bubbleDiameter);
+                int segmentsPhi = Mathf.RoundToInt((2 * Mathf.PI * _radius * Mathf.Sin(theta)) / bubbleDiameter);
                 if (segmentsPhi < 1) segmentsPhi = 1;
                 float stepPhi = 2 * Mathf.PI / segmentsPhi;
 
@@ -58,9 +92,9 @@ public class Planet : MonoBehaviour
 
                 for (float phi = 0; phi < 2 * Mathf.PI; phi += stepPhi)
                 {
-                    float x = center.x + radius * Mathf.Sin(theta) * Mathf.Cos(phi);
-                    float y = center.y + radius * Mathf.Sin(theta) * Mathf.Sin(phi);
-                    float z = center.z + radius * Mathf.Cos(theta);
+                    float x = center.x + _radius * Mathf.Sin(theta) * Mathf.Cos(phi);
+                    float y = center.y + _radius * Mathf.Sin(theta) * Mathf.Sin(phi);
+                    float z = center.z + _radius * Mathf.Cos(theta);
 
                     Vector3 spawnPosition = new Vector3(x, y, z);
 
@@ -94,18 +128,26 @@ public class Planet : MonoBehaviour
                     bubble.Initialize(layer, bubbleColor);
 
                     phiBubbles.Add(bubble);
+                    bubbles.Add(new BubblePosition(bubble, spawnPosition));
                     bubble.onFall += UpdateBubbleCount;
                     countBubbles++;
                 }
             }
-            radius -= bubbleDiameter;
+            _radius -= bubbleDiameter;
         }
 
         StartCoroutine(Rotate());
     }
 
+    public void Restart()
+    {
+        isRestast = true;
+    }
+
     private void UpdateBubbleCount()
     {
+        if(isRestast) return;
+        
         countBubbles--;
         GameSystem.current.AddScore();
 

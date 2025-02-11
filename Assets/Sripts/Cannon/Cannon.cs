@@ -2,7 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 public class Cannon : MonoBehaviour 
-{
+{ 
     [SerializeField] private float initialVelocity;
     [SerializeField] private float angle;
     
@@ -13,10 +13,15 @@ public class Cannon : MonoBehaviour
     private Projectile projectile;
     private Color[] colors;
 
-    public void Initialize(Color[] colors) 
+    private int countProjectiles;
+
+    public void Initialize(Color[] colors, int countProjectiles) 
     {
         this.colors = colors;
-        
+        this.countProjectiles = countProjectiles;
+
+        GameSystem.current.CheckCountProjectiles(countProjectiles);
+
         if(projectile)
         {
             Destroy(projectile.gameObject);
@@ -48,6 +53,9 @@ public class Cannon : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
             line.gameObject.SetActive(false);
+
+            countProjectiles--;
+            GameSystem.current.CheckCountProjectiles(countProjectiles);
         }
     }
 

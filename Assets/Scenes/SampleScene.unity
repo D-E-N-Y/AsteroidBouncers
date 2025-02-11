@@ -479,6 +479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80bfa011724b66dfdb312de2b519370b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  countProjectilesText: {fileID: 1893593800}
 --- !u!1 &314176352
 GameObject:
   m_ObjectHideFlags: 0

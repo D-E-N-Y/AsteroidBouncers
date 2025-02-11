@@ -27,8 +27,16 @@ public class Bubble : MonoBehaviour
         
         meshRenderer.material.color = color;
 
-        isFall = false;
+        
     }
+
+    public void Restart(Vector3 position)
+    {
+        isFall = false;
+        _rigidbody.isKinematic = !isFall;
+
+        transform.position = position;
+    } 
 
     public void Fall()
     {
@@ -55,7 +63,7 @@ public class Bubble : MonoBehaviour
         }
     }
 
-    void OnDestroy()
+    private void OnDisable() 
     {
         onFall?.Invoke();
     }

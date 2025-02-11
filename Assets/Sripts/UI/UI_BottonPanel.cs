@@ -1,18 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class UI_BottonPanel : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private TextMeshProUGUI countProjectilesText;
+    
+    public void Initialize()
     {
-        
+        GameSystem.current.UpdateCountProjectiles += RefreshCountProjectilesText;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void RefreshCountProjectilesText(int count)
     {
-        
+        countProjectilesText.text = count.ToString();
     }
 }
