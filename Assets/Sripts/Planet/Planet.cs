@@ -9,8 +9,8 @@ public class Planet : MonoBehaviour
 
     private void Start() 
     {
-        r = 4;
-        Generate(4);
+        r = 6;
+        Generate(2);
     }
 
     private IEnumerator Rotate()
@@ -53,7 +53,7 @@ public class Planet : MonoBehaviour
                     bubble.Initialize(layer);
                 }
             }
-            r += bubbleDiameter;
+            r -= bubbleDiameter;
         }
 
         StartCoroutine(Rotate());
