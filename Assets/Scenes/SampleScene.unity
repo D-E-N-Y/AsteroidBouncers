@@ -432,7 +432,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98da08bafd7f3e153aaf49f7da405abd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  radius: 6
+  layers: 2
+  speedRotate: 5
+  axisTilt: 12
   bubblePrefab: {fileID: 1254042956876232671, guid: 3de71d805e4bfca8ba8fb40214949685, type: 3}
+  segmentColors:
+  - {r: 0.9254902, g: 0.4117647, b: 0.23921569, a: 1}
+  - {r: 0.3647059, g: 0.20784314, b: 0.1764706, a: 1}
+  - {r: 0.9254902, g: 0.4117647, b: 0.23921569, a: 1}
 --- !u!4 &895622509
 Transform:
   m_ObjectHideFlags: 0

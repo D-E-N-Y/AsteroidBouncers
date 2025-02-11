@@ -12,16 +12,16 @@ public class Bubble : MonoBehaviour
     private Rigidbody _rigidbody;
     public bool isFall { get; private set; }
 
-    public void Initialize(int layer)
+    public void Initialize(int layer, Color color)
     {
         this.layer = layer;
-        
+        this.color = color;
+
         neighbors = new List<Bubble>();
 
         _rigidbody = GetComponent<Rigidbody>();
         meshRenderer = GetComponent<MeshRenderer>();
         
-        color = RandomColor();
         meshRenderer.material.color = color;
 
         isFall = false;
