@@ -3547,3 +3547,43 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 2053.441979 seconds.
+  path: Assets/Prefabs/Planets/Jupiter - Copy.prefab
+  artifactKey: Guid(6188c8568388e9a2088da2e3806d0e68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Planets/Jupiter - Copy.prefab using Guid(6188c8568388e9a2088da2e3806d0e68) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '676fcf6bf6ade6bb29c636da1c84dc78') in 0.027349 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 19
+========================================================================
+Received Import Request.
+  Time since last request: 0.035116 seconds.
+  path: Assets/Prefabs/Planets/Mars - Copy.prefab
+  artifactKey: Guid(89d47f1d883eacc4a8e17c56fcc89b8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Planets/Mars - Copy.prefab using Guid(89d47f1d883eacc4a8e17c56fcc89b8c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '4ff98daa551003f319df59db239ea515') in 0.002674 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 19
+========================================================================
+Received Import Request.
+  Time since last request: 0.001153 seconds.
+  path: Assets/Prefabs/Planets/PlanetBase - Copy.prefab
+  artifactKey: Guid(2dca97e24498cf84ca60244f86ed1afc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Planets/PlanetBase - Copy.prefab using Guid(2dca97e24498cf84ca60244f86ed1afc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'ac3fa656969a456d65197a1900440e4d') in 0.002315 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.001916 seconds.
+  path: Assets/Prefabs/Planets/Uranus - Copy.prefab
+  artifactKey: Guid(30ac8cf1e183214e7b3f0c51181b9514) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Planets/Uranus - Copy.prefab using Guid(30ac8cf1e183214e7b3f0c51181b9514) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: 'd62c29fc7a33ce17b252accf47e8548c') in 0.002190 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 19
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+TcpMessagingSession - receive error: operation aborted. errorcode: 125, details: Operation aborted.
+AssetImportWorker is now disconnected from the server
+Process exiting
