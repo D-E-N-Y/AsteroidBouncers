@@ -32,14 +32,12 @@ public class Bubble : MonoBehaviour
 
     public void Fall()
     {
-        onFall?.Invoke();
-
         isFall = true;
         _rigidbody.isKinematic = !isFall;
 
         foreach(Bubble bubble in neighbors)
         {
-            if(bubble.color == color && !bubble.isFall)
+            if(bubble && bubble.color == color && !bubble.isFall)
             {
                 bubble.Fall();
             }
@@ -55,5 +53,10 @@ public class Bubble : MonoBehaviour
                 neighbors.Add(bubble);
             }
         }
+    }
+
+    void OnDestroy()
+    {
+        onFall?.Invoke();
     }
 }

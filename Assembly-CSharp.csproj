@@ -68,6 +68,7 @@
     <Compile Include="Assets/Sripts/Cannon/Cannon.cs" />
     <Compile Include="Assets/Sripts/Planet/Planet.cs" />
     <Compile Include="Assets/Sripts/Systems/Game/GameSystem.cs" />
+    <Compile Include="Assets/Sripts/DestroyArea/DestroyArea.cs" />
     <Compile Include="Assets/Sripts/Bubble/Bubble.cs" />
   </ItemGroup>
   <ItemGroup>

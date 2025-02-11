@@ -17,7 +17,7 @@ public class GameSystem : MonoBehaviour
 
     private void Start()
     {
-        currentPlanet = 3;
+        currentPlanet = 6;
         
         planets[currentPlanet].gameObject.SetActive(true);
         planets[currentPlanet].Initialize();
