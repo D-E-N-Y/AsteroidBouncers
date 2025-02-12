@@ -11,6 +11,7 @@ ScriptsOnlyBuild:
     - Projectile
     - UI_BottonPanel
     - UI_MainMenu
+    - UI_ResultPanel
     - UI_SettingsPanel
     - UI_TopPanel
     Unity.PlasticSCM.Editor.dll:
@@ -127,6 +128,12 @@ ScriptsOnlyBuild:
     fullTypeName: UI_SettingsPanel
     methodName: MusicVolume
   - assembly: Assembly-CSharp
+    fullTypeName: UI_ResultPanel
+    methodName: PressQuitButton
+  - assembly: Assembly-CSharp
+    fullTypeName: UI_ResultPanel
+    methodName: PressRestartButton
+  - assembly: Assembly-CSharp
     fullTypeName: UI_SettingsPanel
     methodName: PressMusicButton
   - assembly: Assembly-CSharp
@@ -209,6 +216,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 22392}
     - Class: 114
       Script: {instanceID: 52508}
+    - Class: 114
+      Script: {instanceID: 123362}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -945,7 +954,7 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
-      Hash: d67125b05b0885bbc078d413807433d1
+      Hash: 86e8be9e0b5578eebe869faa1b9029e5
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: GameSystem
@@ -1231,6 +1240,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: AudioSystem
+  - hash:
+      serializedVersion: 2
+      Hash: 427e03c6065dc69e08f6672cedc42846
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: UI_ResultPanel
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainMenuScene.unity

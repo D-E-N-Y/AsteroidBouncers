@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
+    [SerializeField] private ParticleSystem impactEffect;
+    
     private MeshRenderer meshRenderer;
     public Color color { get; private set; }
 
@@ -42,6 +44,12 @@ public class Projectile : MonoBehaviour
             }
 
             AudioSystem.current.PlaySFX("Boom");
+            
+            ParticleSystem asteroidImpact = Instantiate(impactEffect, other.ClosestPoint(transform.position), Quaternion.identity);
+            ParticleSystemRenderer renderer = asteroidImpact.GetComponent<ParticleSystemRenderer>();
+            renderer.material.color = color; 
+
+            Destroy(asteroidImpact, 2f);
             Destroy(gameObject);
         }
     }
