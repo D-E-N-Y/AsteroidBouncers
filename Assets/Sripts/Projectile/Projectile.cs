@@ -1,19 +1,26 @@
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
     [SerializeField] private ParticleSystem impactEffect;
     
-    private MeshRenderer meshRenderer;
+    private MeshRenderer[] meshRenderers;
     public Color color { get; private set; }
 
     public void Initialize(Color color)
     {
         this.color = color;
         
-        meshRenderer = GetComponent<MeshRenderer>();
-        meshRenderer.material.color = color;
+        meshRenderers = GetComponentsInChildren<MeshRenderer>()
+                        .Where(m => m.gameObject != gameObject)
+                        .ToArray();
+        
+        foreach(MeshRenderer mesh in meshRenderers)
+        {
+            mesh.material.color = color;
+        }
     }
 
     public IEnumerator Fire(float velocity, float angle, Vector3 direction, Transform firePoint)
