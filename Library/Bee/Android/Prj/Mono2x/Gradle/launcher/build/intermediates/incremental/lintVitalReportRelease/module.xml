@@ -1,6 +1,6 @@
 <lint-module
     format="1"
-    dir="/home/deny/UnityProjects/PlanetOfBubbles/Library/Bee/Android/Prj/Mono2x/Gradle/launcher"
+    dir="/home/deny/UnityProjects/AsteroidBouncers/Library/Bee/Android/Prj/Mono2x/Gradle/launcher"
     name=":launcher"
     type="APP"
     maven="Gradle:launcher:"
